@@ -180,3 +180,41 @@ menu li.subitem a {
     background-color: royalblue;
   }
 }
+
+@media all and (min-width: 960px) {
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+  }
+
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .submenu-active {
+    border: 0;
+  }
+  
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    background: #111111;
+  }
+
+  .button {
+    order: 2;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .button.secondary {
+    border: none;
+  }
+}
