@@ -38,12 +38,12 @@ a {
 }
 
 .item {
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .item:not(.button) a:hover,
 .item a:hover::after {
-  color: rgb(167, 157, 157);
+  color: rgb(202, 196, 196);
 }
 
 .item.button {
@@ -71,7 +71,7 @@ a {
 
 .menu li a {
   display: block;
-  padding: 15px 5px;
+  padding: 15px;
 }
 
 menu li.subitem a {
@@ -93,6 +93,7 @@ menu li.subitem a {
   text-align: center;
   width: 100%;
   transition: all 0.9s ease;
+  cursor: pointer;
 }
 
 .active .item {
@@ -129,6 +130,7 @@ menu li.subitem a {
 
 .subitem a {
   padding: 10px 15px;
+  width: max-content;
 }
 
 .submenu-active {
@@ -162,18 +164,23 @@ menu li.subitem a {
   .item.button a {
     padding: 10px 19px;
     margin: 5px 0px;
-    border-radius: 50px;
+    /* border-radius: 50px; */
   }
 
   .item.button a {
-    background-color: #4464a0;
-    border: 1px solid royalblue;
+    background-color: #f1b703;
+    color: black;
+  }
+
+  .item.button:hover a{
+    background-color: #f1b703;
   }
 
   .button.secondary a {
     border: none;
     background: transparent;
-    border: 2px solid rgb(59, 103, 236);
+    border: 2px solid #f1b703;
+    color: white;
   }
 
   .button:not(.secondary) a:hover {
@@ -186,6 +193,7 @@ menu li.subitem a {
     align-items: flex-start;
     flex-wrap: nowrap;
     background: none;
+    align-items: baseline;
   }
 
   .item {
@@ -194,16 +202,39 @@ menu li.subitem a {
     display: block;
     width: auto;
   }
+
   .submenu-active {
     border: 0;
   }
-  
+
+  .menu > .item:not(.button):hover > a::before,
+  .menu > .submenu-active > a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: #ff0;
+    transition: all 0.8s ease;
+  }
+
   .submenu-active .submenu {
     display: block;
     position: absolute;
     left: 0px;
     top: 70px;
     background: #111111;
+    font-size: 14px;
+    transition: all 0.8s ease;
+  }
+
+  .submenu-active .subitem::after {
+    content: "";
+    display: block;
+    height: 1px;
+    /* width: 100px; */
   }
 
   .button {
