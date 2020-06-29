@@ -32,13 +32,15 @@ a {
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
 
 .item {
   padding: 10px 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .item:not(.button) a:hover,
@@ -134,7 +136,7 @@ menu li.subitem a {
 }
 
 .submenu-active {
-  border: 1px solid #ffffff;
+  border: 1px solid #1d1c1c;
   border-radius: 1px;
 }
 
@@ -172,12 +174,15 @@ menu li.subitem a {
     color: black;
   }
 
-  .item.button:hover a{
+  .item.button:hover a {
     background-color: #f1b703;
   }
 
-  .button.secondary a {
+  .button.secondary {
     border: none;
+  }
+
+  .button.secondary a {
     background: transparent;
     border: 2px solid #f1b703;
     color: white;
@@ -234,6 +239,7 @@ menu li.subitem a {
     content: "";
     display: block;
     height: 1px;
+    background-color: #2d2d2d;
     /* width: 100px; */
   }
 
@@ -247,5 +253,15 @@ menu li.subitem a {
 
   .button.secondary {
     border: none;
+  }
+}
+
+@media all and (max-width: 1060px) {
+  .item {
+    padding: 0px;
+  }
+
+  .logo {
+    font-size: 17px;
   }
 }
