@@ -47,10 +47,13 @@ a {
 }
 
 .item.button {
-  padding: 9px 20px;
+  padding: 9px 25px;
   border: none;
-  background-color: rgba(0, 125, 169, 1);
   transition: all 0.8s ease;
+}
+
+.item.button a {
+  background-color: rgba(0, 125, 169, 1);
 }
 
 .item.button:hover {
@@ -131,4 +134,49 @@ menu li.subitem a {
 .submenu-active {
   border: 1px solid #ffffff;
   border-radius: 1px;
+}
+
+/* Tablet Screen */
+
+@media all and (min-width: 700px) {
+  .menu {
+    justify-content: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .item.button {
+    order: 1;
+    width: auto;
+    display: block;
+  }
+
+  .toggle {
+    order: 2;
+    flex: 1;
+    text-align: right;
+  }
+
+  .item.button a {
+    padding: 10px 19px;
+    margin: 5px 0px;
+    border-radius: 50px;
+  }
+
+  .item.button a {
+    background-color: #4464a0;
+    border: 1px solid royalblue;
+  }
+
+  .button.secondary a {
+    border: none;
+    background: transparent;
+    border: 2px solid rgb(59, 103, 236);
+  }
+
+  .button:not(.secondary) a:hover {
+    background-color: royalblue;
+  }
 }
