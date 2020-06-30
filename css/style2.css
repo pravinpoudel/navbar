@@ -7,13 +7,53 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  background: black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav {
   background: #222;
   padding: 0px 12px;
+  /* height: 8vh; */
+}
+
+.page-main {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  color: #dadada;
+  height: 88vh;
+}
+
+.page-main img {
+  width: 100%;
+}
+
+.page-info {
+  letter-spacing: 3px;
+}
+
+.title {
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font-size: 22px;
+  border-bottom: 1px solid;
+}
+
+.page-info {
+  line-height: 3;
+  letter-spacing: 0;
+  padding: 15px;
 }
 
 ul {
@@ -132,14 +172,22 @@ menu li.subitem a {
 
 .subitem a {
   padding: 10px 15px;
-  width: max-content;
 }
 
 .submenu-active {
-  border: 1px solid #1d1c1c;
+  border: 1px solid #cccccc;
   border-radius: 1px;
 }
 
+@media (orientation: landscape) {
+  .page-main {
+    flex-direction: row;
+  }
+
+  .page-main img {
+    width: 66%;
+  }
+}
 /* Tablet Screen */
 
 @media all and (min-width: 700px) {
@@ -191,6 +239,10 @@ menu li.subitem a {
   .button:not(.secondary) a:hover {
     background-color: royalblue;
   }
+
+  .page-main {
+    flex-direction: row;
+  }
 }
 
 @media all and (min-width: 960px) {
@@ -241,6 +293,10 @@ menu li.subitem a {
     height: 1px;
     background-color: #2d2d2d;
     /* width: 100px; */
+  }
+
+  .subitem a {
+    width: max-content;
   }
 
   .button {
